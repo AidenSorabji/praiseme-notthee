@@ -96,3 +96,27 @@ function showCopyNotification() {
         copyNotification.style.opacity = "0";
     }, 1500); // Display for 1.5 seconds
 }
+
+const githubIcon = document.querySelector('.github-icon');
+
+// Set the threshold distance (in pixels) from the bottom-left corner
+const proximityThreshold = 100;
+
+document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Calculate distance from the cursor to the bottom-left corner
+    const distanceX = mouseX;
+    const distanceY = windowHeight - mouseY;
+    const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+
+    // Toggle visibility based on proximity
+    if (distance < proximityThreshold) {
+        githubIcon.style.opacity = '1';
+    } else {
+        githubIcon.style.opacity = '0';
+    }
+});

@@ -36,6 +36,32 @@ body, html {
 
 }
 
+/* GitHub Icon Styling */
+.github-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff; /* White color */
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in/out */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Centered, larger shadow */
+    transition: opacity 0.3s ease;
+
+}
+
+
+.github-icon:hover {
+    transform: scale(1.1); /* Slight scale-up on hover */
+}
+
 .centered-text {
     text-align: center;
     opacity: 0; /* Initially hidden */
